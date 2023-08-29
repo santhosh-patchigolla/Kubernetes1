@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: ReplicaSet
 metadata:
   name: frontend
-  labels:
+  labels:                               # Labels assigned at set level
     app: guestbook
     tier: frontend
 spec:
@@ -12,9 +12,25 @@ spec:
       tier: frontend
   template:
     metadata:
-      labels:
+      labels:                          # Labels assigned at pod level
         tier: frontend
     spec:
       containers:
-      - name: php-redis
-        image: gcr.io/google_samples/gb-frontend:v3
+      - name: nginx
+        image: nginx
+        ports:
+        - containerPort: 80
+
+--- 
+# If you don't mention the type of service, by default it will be ClusterIP Service [ which is accessible only in the cluster ]
+apiVersion: v1
+kind: Service
+metadata:
+  name: frontend-svc
+spec:
+  selector:
+    tier: frontend 
+  ports:
+    - protocol: TCP
+      port: 80                         # Port number that your service has to listen and this is the port you will access
+      targetPort: 80                   # TargetPort forwards the requests to the backend pod
