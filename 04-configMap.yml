@@ -13,7 +13,7 @@ data:
   ENV: dev
   BATCH: "54" 
   APP: ecomm 
-  DEV: mikel 
+  DEV: mikel
 
 --- 
 
