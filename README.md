@@ -115,3 +115,6 @@ Instead, we run SET's and set's will take care of all the above 3 points.
     4) Stateful Set
 
 ```
+
+
+### Tomorrow, I will start using the EKS [ Elastic Kubernetes Service : Managed Service For Kubernetes In AWS ]
