@@ -14,27 +14,26 @@ spec:
       maxSurge: 20
   selector:
     matchLabels:
-      app: frontend
+      app: nginx
   template:
     metadata:
       labels:
-        app: frontend
+        app: nginx
     spec:
       containers:
-      - name: frontend
+      - name: nginx
         image: nginx:latest
         ports:
         - containerPort: 80
 
 ---
-
 apiVersion: v1
 kind: Service
 metadata:
-  name: frontend-svc
+  name: nginx-svc
 spec:
   selector:
-     app: frontend
+     app: nginx
   ports:
     - protocol: TCP
       port: 80                         # Port number that your service has to listen and this is the port you will access
