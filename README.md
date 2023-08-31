@@ -116,5 +116,11 @@ Instead, we run SET's and set's will take care of all the above 3 points.
 
 ```
 
+### Annotations : 
 
-### Tomorrow, I will start using the EKS [ Elastic Kubernetes Service : Managed Service For Kubernetes In AWS ]
+
+```
+Annotations in kubernetes allows pods to have labels with special characters and with greater character limit.
+
+They are primarily used to add some extra power or features to your resources.
+```
