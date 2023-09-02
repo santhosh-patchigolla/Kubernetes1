@@ -10,3 +10,11 @@ Example : Kubernetes1/docker-imaging ]$ docker build -t docker.io/patchigolladur
 
 V1=tag name we created to identify the version 
 . = As the Image is on the PWD 
+
+
+docker push patchigolladurgesh/samples:v1  >to push the image to the repostory 
+to do that you need to login 
+#docker login
+
+> In interview if any one asked how you run  container with which ID 
+ANS: as per the org standards we will run using the syste accouts
