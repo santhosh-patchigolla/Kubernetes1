@@ -12,4 +12,4 @@ CMD             ["nginx", "-g", "daemon off;"]
 # # ENTRYPOINT can never be overridden    
 # ENTRYPOINT      ["echo"]
 
-#
+# To build the DOcker iages go to that direrety or navigate where this poath in the mechine run this commnad Kubernetes1/docker-imaging ]#   docker build .
